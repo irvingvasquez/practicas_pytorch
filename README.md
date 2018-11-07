@@ -58,14 +58,13 @@ These instructions also assume you have `git` installed for working with Github 
 conda install git
 ```
 
-If you'd like to learn more about version control and using `git` from the command line, take a look at our [free course: Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123).
 
 **Now, we're ready to create our local environment!**
 
 1. Clone the repository, and navigate to the downloaded folder. This may take a minute or two to clone due to the included image data.
 ```
-git clone https://github.com/udacity/CVND_Exercises.git
-cd CVND_Exercises
+git clone https://github.com/irvingvasquez/practicas_pytorch.git
+cd practicas_pytorch
 ```
 
 2. Create (and activate) a new environment, named `visionpt` with Python 3.6. If prompted to proceed with the install `(Proceed [y]/n)` type y.
@@ -81,7 +80,7 @@ cd CVND_Exercises
 	activate visionpt
 	```
 	
-	At this point your command line should look something like: `(visionpt) <User>:CVND_Exercises <user>$`. The `(visionpt)` indicates that your environment has been activated, and you can proceed with further package installations.
+	At this point your command line should look something like: `(visionpt) <User>:practicas_pytorch <user>$`. The `(visionpt)` indicates that your environment has been activated, and you can proceed with further package installations.
 
 3. Install PyTorch and torchvision; this should install the latest version of PyTorch.
 	
@@ -106,7 +105,7 @@ Now all of the `visionpt` libraries are available to you. Assuming you're enviro
 
 ```
 cd
-cd CVND_Exercises
+cd practicas_pytorch
 jupyter notebook
 ```
 
