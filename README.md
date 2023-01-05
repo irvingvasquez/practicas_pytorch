@@ -1,27 +1,27 @@
 # Prácticas de Pytorch
 
-Pytorch es una librería reciente que se está esparciendo en la comunidad académina e industrial para desarrollar sistemas basados en aprendizaje, y en especial en aprendizaje profundo. En este repositorio encontrarás una serie de ejercicios para aprender o reforzar tu conocimiento acerca de las redes neuronales profundas.
+
+Pytorch es una librería reciente que se está esparciendo en la comunidad académina e industrial para desarrollar sistemas basados en aprendizaje automático, en especial en aprendizaje profundo. En este repositorio encontrarás una serie de ejercicios para aprender o reforzar tu conocimiento acerca de la implementación de redes neuronales profundas.
 
 Irving Vasquez
 [Sitio Web]
 
 
-# Configure and Manage Your Environment with Anaconda
+# Configurar ambiente con conda
 
-Per the Anaconda [docs](http://conda.pydata.org/docs):
+Para facilitar la instalación y ejecución de los ejercicios se utiliza de manejador conda. En dependencia de que distribución se use se puede llamar minicomda o anaconda. Para simplicidad en este repositorio se usa minconda.
 
-> Conda is an open source package management system and environment management system 
-for installing multiple versions of software packages and their dependencies and 
-switching easily between them. It works on Linux, OS X and Windows, and was created 
-for Python programs but can package and distribute any software.
+De la definición de conda [docs](http://conda.pydata.org/docs):
+
+> Conda is an open source package management system and environment management system for installing multiple versions of software packages and their dependencies and switching easily between them. It works on Linux, OS X and Windows, and was created for Python programs but can package and distribute any software.
 
 ## Overview
-Using Anaconda consists of the following:
+Para tener los programas listos haremos dos cosas:
 
 1. Install [`miniconda`](http://conda.pydata.org/miniconda.html) on your computer, by selecting the latest Python version for your operating system. If you already have `conda` or `miniconda` installed, you should be able to skip this step and move on to step 2.
 2. Create and activate * a new `conda` [environment](http://conda.pydata.org/docs/using/envs.html).
 
-\* Each time you wish to work on any exercises, activate your `conda` environment!
+\* Nota que cada que vayamos a usar los programas debemos de activar el ambiente de `conda`!
 
 ---
 
@@ -48,7 +48,7 @@ Using Anaconda consists of the following:
 - **Mac:** http://conda.pydata.org/docs/install/quick.html#os-x-miniconda-install
 - **Windows:** http://conda.pydata.org/docs/install/quick.html#windows-miniconda-install
 
-## 2. Create and Activate the Environment
+## 2. Crear y activar el ambiente
 
 For Windows users, these following commands need to be executed from the **Anaconda prompt** as opposed to a Windows terminal window. For Mac, a normal terminal window will work. 
 
@@ -71,27 +71,26 @@ cd practicas_pytorch
 
 	- __Linux__ or __Mac__: 
 	```
-	conda create -n visionpt python=3.6
-	source activate visionpt
+	conda create -n practicas_pt python=3.7
+	source activate practicas_pt
 	```
 	- __Windows__: 
 	```
-	conda create --name visionpt python=3.6
-	activate visionpt
+	conda create --name practicas_pt python=3.7
+	conda activate practicas_pt
 	```
 	
-	At this point your command line should look something like: `(visionpt) <User>:practicas_pytorch <user>$`. The `(visionpt)` indicates that your environment has been activated, and you can proceed with further package installations.
+	At this point your command line should look something like: `(practicas_pt) <user>:practicas_pytorch <user>$`. The `(practicas_pt)` indicates that your environment has been activated, and you can proceed with further package installations.
 
-3. Install PyTorch and torchvision; this should install the latest version of PyTorch.
+3. Install PyTorch and torchvision; this should install the latest version of PyTorch. Mi recomendación es revisar antes la [documentación oficial](https://pytorch.org/get-started/locally/) de pytorch y verificar los comandos en dependencia de si se va a utilizar GPU o no. Los siguientes comandos son para usar CPU.
 	
 	- __Linux__ or __Mac__: 
 	```
-	conda install pytorch torchvision -c pytorch 
+	conda install pytorch torchvision torchaudio cpuonly -c pytorch
 	```
 	- __Windows__: 
 	```
-	conda install pytorch-cpu -c pytorch
-	pip install torchvision
+	conda install pytorch torchvision torchaudio cpuonly -c pytorch
 	```
 
 6. Install a few required pip packages, which are specified in the requirements text file (including OpenCV).
