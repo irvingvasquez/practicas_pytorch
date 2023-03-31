@@ -7,7 +7,7 @@ Irving Vasquez
 [Sitio Web]
 
 
-# Configurar ambiente con conda
+## Configurar ambiente con conda
 
 Para facilitar la instalación y ejecución de los ejercicios se utiliza de manejador conda. En dependencia de que distribución se use se puede llamar minicomda o anaconda. Para simplicidad en este repositorio se usa minconda.
 
@@ -15,7 +15,7 @@ De la definición de conda [docs](http://conda.pydata.org/docs):
 
 > Conda is an open source package management system and environment management system for installing multiple versions of software packages and their dependencies and switching easily between them. It works on Linux, OS X and Windows, and was created for Python programs but can package and distribute any software.
 
-## Overview
+### Pasos
 Para tener los programas listos haremos dos cosas:
 
 1. Install [`miniconda`](http://conda.pydata.org/miniconda.html) on your computer, by selecting the latest Python version for your operating system. If you already have `conda` or `miniconda` installed, you should be able to skip this step and move on to step 2.
@@ -25,7 +25,7 @@ Para tener los programas listos haremos dos cosas:
 
 ---
 
-## 1. Installation
+## 1. Instalación de miniconda
 
 **Download** the latest version of `miniconda` that matches your system.
 
