@@ -1,7 +1,7 @@
 # Prácticas de Pytorch
 
 
-Pytorch es una librería reciente que se está esparciendo en la comunidad académina e industrial para desarrollar sistemas basados en aprendizaje automático, en especial en aprendizaje profundo. En este repositorio encontrarás una serie de ejercicios para aprender o reforzar tu conocimiento acerca de la implementación de redes neuronales profundas.
+Pytorch es una librería reciente que se está esparciendo en la comunidad académina e industrial para desarrollar sistemas basados en aprendizaje automático, en especial en aprendizaje profundo. En este repositorio encontrarás una serie de ejercicios para aprender o reforzar tu conocimiento acerca de la implementación de redes neuronales profundas. Este repositorio es complemento al curso de introducción a las redes neuronales. Para más detalles visita mi página web.
 
 Irving Vasquez
 [Sitio Web]
@@ -67,30 +67,34 @@ git clone https://github.com/irvingvasquez/practicas_pytorch.git
 cd practicas_pytorch
 ```
 
-2. Create (and activate) a new environment, named `visionpt` with Python 3.6. If prompted to proceed with the install `(Proceed [y]/n)` type y.
+2. Create (and activate) a new environment, named `pptorch` with Python 3.7. If prompted to proceed with the install `(Proceed [y]/n)` type y.
 
 	- __Linux__ or __Mac__: 
 	```
-	conda create -n practicas_pt python=3.7
-	source activate practicas_pt
+	conda create -n pptorch python=3.7
+	source activate pptorch
 	```
 	- __Windows__: 
 	```
-	conda create --name practicas_pt python=3.7
-	conda activate practicas_pt
+	conda create --name pptorch python=3.7
+	conda activate pptorch
 	```
 	
-	At this point your command line should look something like: `(practicas_pt) <user>:practicas_pytorch <user>$`. The `(practicas_pt)` indicates that your environment has been activated, and you can proceed with further package installations.
+	At this point your command line should look something like:
+
+	`(pptorch) <user>:practicas_pytorch <user>$`. 
+	
+	The `(pptorch)` indicates that your environment has been activated, and you can proceed with further package installations.
 
 3. Install PyTorch and torchvision; this should install the latest version of PyTorch. Mi recomendación es revisar antes la [documentación oficial](https://pytorch.org/get-started/locally/) de pytorch y verificar los comandos en dependencia de si se va a utilizar GPU o no. Los siguientes comandos son para usar CPU.
 	
 	- __Linux__ or __Mac__: 
 	```
-	conda install pytorch torchvision torchaudio cpuonly -c pytorch
+	conda install pytorch=1 torchvision cpuonly -c pytorch
 	```
 	- __Windows__: 
 	```
-	conda install pytorch torchvision torchaudio cpuonly -c pytorch
+	conda install pytorch=1 torchvision cpuonly -c pytorch
 	```
 
 6. Install a few required pip packages, which are specified in the requirements text file (including OpenCV).
@@ -100,7 +104,7 @@ pip install -r requirements.txt
 
 7. That's it!
 
-Now all of the `visionpt` libraries are available to you. Assuming you're environment is still activated, you can navigate to the Exercises repo and start looking at the notebooks:
+Now all of the `pptorch` libraries are available to you. Assuming you're environment is still activated, you can navigate to the Exercises repo and start looking at the notebooks:
 
 ```
 cd
