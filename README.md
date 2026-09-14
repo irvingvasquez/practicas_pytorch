@@ -67,16 +67,16 @@ git clone https://github.com/irvingvasquez/practicas_pytorch.git
 cd practicas_pytorch
 ```
 
-2. Create (and activate) a new environment, named `pptorch` with Python 3.7. If prompted to proceed with the install `(Proceed [y]/n)` type y.
+2. Create (and activate) a new environment, named `pptorch` with Python 3.12. If prompted to proceed with the install `(Proceed [y]/n)` type y.
 
 	- __Linux__ or __Mac__: 
 	```
-	conda create -n pptorch python=3.7
-	source activate pptorch
+	conda create -n pptorch python=3.12
+	conda activate pptorch
 	```
 	- __Windows__: 
 	```
-	conda create --name pptorch python=3.7
+	conda create --name pptorch python=3.12
 	conda activate pptorch
 	```
 	
@@ -86,23 +86,23 @@ cd practicas_pytorch
 	
 	The `(pptorch)` indicates that your environment has been activated, and you can proceed with further package installations.
 
-3. Install PyTorch and torchvision; this should install the latest version of PyTorch. Mi recomendación es revisar antes la [documentación oficial](https://pytorch.org/get-started/locally/) de pytorch y verificar los comandos en dependencia de si se va a utilizar GPU o no. Los siguientes comandos son para usar CPU.
+3. Install PyTorch 2.13 and torchvision from conda-forge. Mi recomendación es revisar antes la [documentación oficial](https://pytorch.org/get-started/locally/) de pytorch y verificar los comandos en dependencia de si se va a utilizar GPU o no. El comando por defecto es para CPU.
 	
-	- __Linux__ or __Mac__: 
+	- __CPU__ (recomendado para las prácticas): 
 	```
-	conda install pytorch=1 torchvision cpuonly -c pytorch
+	conda install pytorch-cpu torchvision -c conda-forge
 	```
-	- __Windows__: 
+	- __GPU__: 
 	```
-	conda install pytorch=1 torchvision cpuonly -c pytorch
+	conda install pytorch-gpu torchvision -c conda-forge
 	```
 
-6. Install a few required pip packages, which are specified in the requirements text file (including OpenCV).
+4. Install a few required pip packages, which are specified in the requirements text file.
 ```
 pip install -r requirements.txt
 ```
 
-7. That's it!
+5. That's it!
 
 Now all of the `pptorch` libraries are available to you. Assuming you're environment is still activated, you can navigate to the Exercises repo and start looking at the notebooks:
 

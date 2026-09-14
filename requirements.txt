@@ -1,2 +1,16 @@
-jupyter==1.0.0
-matplotlib==3.5.3
+# Jupyter
+notebook>=7.0
+ipykernel>=6.29
+ipywidgets>=8.0
+
+# Core scientific stack
+numpy>=1.26
+matplotlib>=3.8
+pandas>=2.2
+seaborn>=0.13
+scikit-learn>=1.4
+Pillow>=10.0
+
+# Vision Transformer notebook
+vit-pytorch
+linformer

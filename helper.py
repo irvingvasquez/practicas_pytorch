@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from torch import nn, optim
-from torch.autograd import Variable
 
 
 def test_network(net, trainloader):
@@ -10,16 +9,13 @@ def test_network(net, trainloader):
     optimizer = optim.Adam(net.parameters(), lr=0.001)
 
     dataiter = iter(trainloader)
-    images, labels = dataiter.next()
+    images, labels = next(dataiter)
 
-    # Create Variables for the inputs and targets
-    inputs = Variable(images)
-    targets = Variable(images)
+    inputs = images
+    targets = images
 
-    # Clear the gradients from all Variables
     optimizer.zero_grad()
 
-    # Forward pass, then backward pass, then update weights
     output = net.forward(inputs)
     loss = criterion(output, targets)
     loss.backward()
@@ -62,7 +58,7 @@ def view_recon(img, recon):
     axes[1].imshow(recon.data.numpy().squeeze())
     for ax in axes:
         ax.axis('off')
-        ax.set_adjustable('box-forced')
+        ax.set_adjustable('box')
 
 def view_classify(img, ps, version="MNIST"):
     ''' Function for viewing an image and it's predicted classes.
